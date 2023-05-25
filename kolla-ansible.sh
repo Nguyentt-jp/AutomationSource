@@ -26,13 +26,7 @@ kolla-ansible install-deps
 #Prepare initial configuration
 kolla-genpwd
 cp /etc/kolla/globals.yml /etc/kolla/globals.yml.bak
-rm /etc/kolla/globals.yml
-echo "  kolla_base_distro: "ubuntu"
-		openstack_tag_suffix: "-aarch64"
-		network_interface: "ens33"
-		neutron_external_interface: "ens34"
-		kolla_internal_vip_address: "192.168.1.254"
-		" >> /etc/kolla/globals.yml
+git clone https://github.com/Nguyentt-jp/AutomationSource/blob/main/globals.yml
 		
 #Deployment
 kolla-ansible -i ./all-in-one bootstrap-servers
@@ -40,5 +34,5 @@ kolla-ansible -i ./all-in-one prechecks
 kolla-ansible -i ./all-in-one deploy
 
 #Using OpenStack
-pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/
-kolla-ansible post-deploy
+#pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/
+#kolla-ansible post-deploy
