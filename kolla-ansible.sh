@@ -26,12 +26,12 @@ kolla-ansible install-deps
 #Prepare initial configuration
 kolla-genpwd
 cp /etc/kolla/globals.yml /etc/kolla/globals.yml.bak
-cp /home/ubuntu/ubuntu/AutomationSource/globals.yml /etc/kolla
+cp /AutomationSource/globals.yml /etc/kolla
 		
 #Deployment
-kolla-ansible -i ./all-in-one bootstrap-servers
-kolla-ansible -i ./all-in-one prechecks
-kolla-ansible -i ./all-in-one deploy
+#kolla-ansible -i ./all-in-one bootstrap-servers
+#kolla-ansible -i ./all-in-one prechecks
+#kolla-ansible -i ./all-in-one deploy
 
 #Using OpenStack
 #pip install python-openstackclient -c https://releases.openstack.org/constraints/upper/
