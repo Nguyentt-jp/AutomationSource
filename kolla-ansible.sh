@@ -26,7 +26,10 @@ kolla-ansible install-deps
 #Prepare initial configuration
 kolla-genpwd
 cp /etc/kolla/globals.yml /etc/kolla/globals.yml.bak
-cp /AutomationSource/globals.yml /etc/kolla
+cp AutomationSource/globals.yml /etc/kolla
+
+sudo pvcreate /dev/sda
+sudo vgcreate cinder-volumes /dev/sda
 		
 #Deployment
 #kolla-ansible -i ./all-in-one bootstrap-servers
