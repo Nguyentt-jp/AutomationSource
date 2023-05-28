@@ -28,8 +28,8 @@ kolla-genpwd
 cp /etc/kolla/globals.yml /etc/kolla/globals.yml.bak
 cp AutomationSource/globals.yml /etc/kolla
 
-sudo pvcreate /dev/sda
-sudo vgcreate cinder-volumes /dev/sda
+#sudo pvcreate /dev/sdb
+#sudo vgcreate cinder-volumes /dev/sdb
 		
 #Deployment
 #kolla-ansible -i ./all-in-one bootstrap-servers

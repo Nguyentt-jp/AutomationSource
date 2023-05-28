@@ -571,7 +571,7 @@ enable_watcher: "yes"
 #nova_backend_ceph: "no"
 
 # Valid options are [ qemu, kvm, vmware ]
-#nova_compute_virt_type: "kvm"
+nova_compute_virt_type: "qemu"
 
 # The number of fake driver per compute node
 #num_nova_fake_per_node: 5
